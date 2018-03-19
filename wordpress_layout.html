@@ -1,0 +1,311 @@
+<!DOCTYpE html>
+<html lang="en-US">
+	<head>
+		<title>Wordpress Theme</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			*{
+				box-sizing:border-box;
+			}
+				
+			body {
+				max-width:960px;
+				margin: 0 auto;
+			}
+			h1{
+				font-size:2.25em;
+			}
+			h2{
+				font-size:1.875em;
+			}
+			h3{
+				font-size:1.5em;
+			}
+			h1, h2{
+				font-family:"Century Oldstyle";
+			}
+			p, h3, li{
+				font-family:"Lucida Sans";
+			}
+			.byline{
+				font-size:0.83em;
+			}
+			/* For mobile phones: */
+			.col {
+				float:left;
+				width:7.29166666666667%;
+				margin-left: 1.041666666667%;
+				padding: 1.041666666667%;
+				margin-bottom:10px;
+			}
+			@media screen and (min-width:1px) and (max-width:599px) {
+				.col.xs2 {width: 15.625%;}
+				.col.xs3 {width: 23.95833333333%;}
+				.col.xs4 {width: 32.29166666667%;}
+				.col.xs5 {width: 40.625%;}
+				.col.xs6 {width: 48.95833333333%;}
+				.col.xs7 {width: 57.29166666667%;}
+				.col.xs8 {width: 65.625%;}
+				.col.xs9 {width: 73.958333333333%;}
+				.col.xs10 {width: 82.29166666667%;}
+				.col.xs11 {width: 90.625%;}
+				.col.xs12 {width: 98.95833333333%;}
+				
+				.card-group{
+					flex-direction:column;
+				}
+				.card{
+					width:100%;
+				}
+				.card:first-of-type{
+					order:1;
+				
+				}
+				.card:nth-of-type(2){
+					order:2;
+				}
+				.card:nth-of-type(3){
+					order:3;
+				}
+				.card:nth-of-type(4){
+					order:4;
+				}
+				.card:nth-of-type(5){
+					order:5;
+				}
+				.card:nth-of-type(6){
+					order:6;
+				}
+			}	
+			@media screen and (min-width:600px) {
+			
+				.col.sm2 {width: 15.625%;}
+				.col.sm3 {width: 23.95833333333%;}
+				.col.sm4 {width: 32.29166666667%;}
+				.col.sm5 {width: 40.625%;}
+				.col.sm6 {width: 48.95833333333%;}
+				.col.sm7 {width: 57.29166666667%;}
+				.col.sm8 {width: 65.625%;}
+				.col.sm9 {width: 73.958333333333%;}
+				.col.sm10 {width: 82.29166666667%;}
+				.col.sm11 {width: 90.625%;}
+				.col.sm12 {width: 98.95833333333%;}								
+			}
+			#breaknews{
+				background-color: rgb(255, 0, 0);
+				color:rgb(255, 255, 255);
+				padding: 0.25em 0.5em;
+			}
+			
+			embed{
+				width:100%;
+				height:250px;
+			}
+			img{
+				width:100%;
+				height:auto;
+				margin-top:16px;
+			}
+			.row.top, .row.left{
+				border-bottom:0.2em solid #ededed;
+				display:table;
+			}
+			.row.left{
+				border-bottom:0.1em solid #ededed;
+				display:table;
+			}
+			.first-column{
+				border-right:0.2em solid #ededed;
+				margin-top:1em;
+			}
+			.card{
+				border:1px solid #e5e5e5;
+				-webkit-box-shadow:0.25em 0.25em #f8f8f8;
+				-moz-box-shadow:0.25em 0.25em #f8f8f8;
+				-oz-box-shadow:0.25em 0.25em #f8f8f8;
+				box-shadow:0.25em 0.25em #f8f8f8;
+				
+			}
+			.col.sm9.xs9 a, .col.sm12.xs12 a, .col.sm7.xs12 ul li a, .col.sm12.xs12 article h2 a, .col.sm12.xs12 article ul li a, .col.sm5.xs12 article h2 a, .col.sm5.xs12 article ul li a{
+				text-decoration:none;
+				color:#343434;
+			}
+			.col.sm9.xs9 a:link, .col.sm12.xs12 a:link, .col.sm7.xs12 ul li a:link, .col.sm12.xs12 article h2 a:link, .col.sm12.xs12 article ul li a:link, .col.sm5.xs12 article h2 a:link, .col.sm5.xs12 article ul li a:link{
+				color:#343434;
+			}
+			.col.sm9.xs9 a:hover, .col.sm12.xs12 a:hover, .col.sm7.xs12 ul li a:hover, .col.sm12.xs12 article h2 a:hover, .col.sm12.xs12 article ul li a:hover, .col.sm5.xs12 article h2 a:hover, .col.sm5.xs12 article ul li a:hover{
+				color:#8989ff;
+			}
+			.col.sm9.xs9 a:active, .col.sm12.xs12 a:active, .col.sm7.xs12 ul li a:active, .col.sm12.xs12 article h2 a:active, .col.sm12.xs12 article ul li a:active, .col.sm5.xs12 article h2 a:active, .col.sm5.xs12 article ul li a:active{
+				color:#8989ff;
+			}
+			hr{
+				width:5%;
+				float:left;
+				height:0.5em;
+				background-color:#343434;
+			}
+			
+			.left .col.sm12.xs12{
+				margin-top:-1.5em;
+			}
+			.card-group{
+				display:flex;
+				width:100%;
+				padding:8px;
+				align-items:stretch;
+			}	
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row top">
+				<div class ="col sm7 xs12 first-column">
+					<div class="row left">
+						<div class="col sm12 xs12">
+							<article>
+								<div class="row">
+									<div class="col sm12 xs12">
+										<h1><a href="#top">Iranian president rips into Trump as a ‘rogue newcomer’ to world politics</a></h1>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col sm5 xs5">
+										<img src="http://tinyurl.com/y73k5mk2" alt="picture of homer simpson">
+									</div><!--end of column-->
+									<div class="col sm7 xs7">
+										<p class="lead">In his U.N. speech, Hassan Rouhani vowed Iran would not be the first to walk away from the 2015 nuclear deal.</p>
+
+										<p class="byline">By Carol Morello</p>
+										<ul>
+											<li><a href="#top"><strong>"Trump says he’s made a decision on the Iran deal, but he won’t say what it is</strong></a></li>
+										</ul>
+									</div><!--end of column-->
+								</div><!--end of row-->
+							</article>
+						</div><!--end of column-->
+					</div><!--end of row-->
+					
+					<p ><strong id="breaknews">BREAKING NEWS</strong></p>
+					
+					<div class="row right">
+						<div class="col sm12 xs12">
+							<article>				
+								<h2><a href="#top">Puerto Rico entirely without power as Hurricane Maria hammers island</a></h2>
+								<p class="lead">Puerto Rico's emergency management director, Abner Gomez, said: "The information we have received is not encouraging. It's a system that has destroyed everything it has had in its path."</p>
+
+								<p class="byline">By Samantha Schmidt and Sandhya Somashekhar</p>
+
+								<ul>
+									<li><a href="#top"><strong>As Hurricane Maria slowly pulls away from Puerto Rico, the U.S. East Coast awaits its next move
+									Cries of 'silence'</strong></a></li>
+								</ul>
+							</article>
+						</div><!--end of column-->
+					</div><!--end of row-->
+				</div><!--end of column-->
+				<div class="col sm5 xs12">
+					<p>
+						<iframe src="https://www.youtube.com/embed/cITs759fXbw"></iframe>
+					</p>
+					<p class="video-credit">(Video: The post; photo: Getty)</p>
+				
+					<article>
+						<h2 class="news-item"><a href="#top">Digging with bare hands, rescuers try to reach survivors after Mexico quake kills more than 200</a></h2>
+						<p class="lead">In harrowing scenes that horrified Mexicans, rescuers pulled the bodies of dozens of children from the ruins of the elementary school.</p>
+
+						<p class="byline">By Joshua partlow</p>
+
+						<ul>
+							<li><a href="#top"><strong>Graphic: See the more than 200 other seismic events that have rocked Mexico</strong></a></li>
+						</ul>
+					</article>
+				</div><!--end of column-->
+			</div><!--end of row-->
+			<div class="row">
+			
+				<div class="col sm12 xs12">
+					<hr/>
+					<h3>Opinions</h3>
+				</div>
+			</div>
+			<div class="card-table">
+			<div class="row card-group">
+				<div class="col sm6 xs12 card">
+					<div class="row ">
+						<div class="col sm3 xs3">
+							<img src="http://tinyurl.com/y8lu5jhb" alt="picture of bart simpson">
+						</div>
+						<div class="col sm9 xs9">
+							<h2 class="news-item"><a href="#top">Trump’s repeal push just took a massive new hit</a></h2>
+							<p class="byline">By Greg Sargent</p>
+						</div>
+					</div>
+				</div>
+				<div class="col sm6 xs12 card">
+					<div class="row">
+						<div class="col sm3 xs3">
+							<img src="http://tinyurl.com/y8lu5jhb" alt="picture of bart simpson">
+						</div>
+						<div class="col sm9 xs9">
+							<h2 class="news-item"><a href="#top">Mexico needs help now. Can Trump overcome his grudges and provide it?</a></h2>
+						<p class="byline">By León Krauze</p>
+						</div>
+					</div>
+				</div>
+			</div><!--end of row-->
+			</div>
+			<div class="row card-group">
+				<div class="col sm6 xs12 card">
+					<div class="row">
+						<div class="col sm3 xs3">
+							<img src="http://tinyurl.com/y8lu5jhb" alt="picture of bart simpson">
+						</div>
+						<div class="col sm9 xs9">
+							<h2 class="news-item"><a href="#top">The McConnell mentality keeps the Senate and Congress dysfunctional</a></h2>
+							<p class="byline">By Jennifer Rubin</p>
+						</div>
+					</div>
+				</div><!--end of column-->
+				<div class="col sm6 xs12 card">
+					<div class="row">
+						<div class="col sm3 xs3">
+							<img src="http://tinyurl.com/y8lu5jhb" alt="picture of bart simpson">
+						</div>
+						<div class="col sm9 xs9">
+							<p class="deck">‘The American War’ podcast</p>
+							<h2 class="news-item"><a href="#top">The Vietnamese who fought have rarely told their stories — until now</a></h2>
+							<p class="byline">By Alyssa Rosenberg</p>
+						</div>
+					</div>
+				</div><!--end of column-->
+			</div><!--end of row-->
+			<div class="row card-group">
+				<div class="col sm6 xs12 card">
+					<div class="row ">
+						<div class="col sm3 xs3">
+							<img src="http://tinyurl.com/y8lu5jhb" alt="picture of bart simpson">
+						</div>
+						<div class="col sm9 xs9">
+							<h2 class="news-item"><a href="#top">Why the left hated Trump’s U.N. speech</a></h2>
+							<p class="byline">By Marc A. Thiessen</p>
+						</div>
+					</div>
+				</div><!--end of column-->
+				<div class="col sm6 xs12 card">
+					<div class="row ">
+						<div class="col sm3 xs3">
+							<img src="http://tinyurl.com/y8lu5jhb" alt="picture of bart simpson">
+						</div>
+						<div class="col sm9 xs9">
+							<h2 class="news-item"><a href="#top">The FBI wiretap on paul Manafort is a big deal. Here’s why.</a></h2>
+							<p class="byline">By Randall D. Eliason</p>
+						</div>
+					</div>
+				</div><!--end of column-->
+			</div><!--end of row-->
+		</div>
+	</body>
+</html>
